@@ -44,7 +44,6 @@ document.querySelector(".deleteBtn").addEventListener("click", function (e) {
 </script>
 
 <style>
-
 div {
   text-align: center;
   border: 2px solid Black;
