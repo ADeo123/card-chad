@@ -2,10 +2,10 @@
   <h1>{{ msg }}</h1>
 
 
-<button class="deleteBtn">Delete Card</button>
-<button class="duplicateBtn"> Duplicate Card</button>
-<button class="changeColorBtn"> Background Color</button>
-<button class="ChangeHeadingBtn">Change Heading</button>
+<button class="deleteBtn" v-on:click="deletes">Delete Card</button>
+<button class="duplicateBtn" v-on:click="duplicates"> Duplicate Card</button>
+<button class="changeColorBtn" v-on:click="backgroundColors"> Background Color</button>
+<button class="ChangeHeadingBtn" v-on:click="changeHeadings">Change Heading</button>
 
 <div>
   <h1 id="heading"> Penn State University </h1>
@@ -42,7 +42,50 @@ const state = reactive({ count: 0 })
 </script>
 
 <script>
+duplicates() {
+document.querySelector(".duplicateBtn").addEventListener("click", function(e){
+    const div = document.querySelector(".duplicateBtn");
+    let division = div.cloneNode(true);
+    document.body.appendChild(division);
+});
+}
 
+//JavaScript Hover implementation
+document.querySelector("div").addEventListener("mouseover", function (e) {
+  const div = document.querySelector("div");
+  let hoverEffect = div.style.borderColor = "white";
+  document.body.appendChild(hoverEffect);
+});
+
+document.querySelector("div").addEventListener("mouseout", function (e) {
+  const div = document.querySelector("div");
+  let hoverEffect = div.style.borderColor = "black";
+  document.body.appendChild(hoverEffect);
+});
+
+//When the card is clicked the color changes
+backgroundColors() {
+document.querySelector("changeColorBtn").addEventListener("click", function (e) {
+  const div = document.querySelector("div");
+  let divColor = (div.style.backgroundColor = "gray"); //changes the background to gray
+  document.body.appendChild(divColor);
+});
+}
+
+//When the heading/title is clicked it is change to "something else"
+changeHeadings (){
+document.querySelector("ChangeHeadingBtn").addEventListener("click", function (e) {
+  heading.innerHTML = "Something else"; //replaces the text of the heading
+});
+}
+
+//Deletes the last duplicated card from the webpage
+deletes() {
+  document.querySelector(".deleteBtn").addEventListener("click", function (e) {
+  let div = document.querySelector("div");
+  document.parentNode.removeChild(div);
+});
+}
 
 </script>
 
