@@ -8,6 +8,39 @@ import HelloWorld from './components/HelloWorld.vue'
 
 // This starter template is using Vue 3 experimental <script setup> SFCs
 // Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
+
+document.querySelector(".duplicateBtn").addEventListener("click", function(e){
+    const div = document.querySelector(".duplicateBtn");
+    let division = div.cloneNode(true);
+    document.body.appendChild(division);
+});
+//JavaScript Hover implementation
+document.querySelector("div").addEventListener("mouseover", function (e) {
+  const div = document.querySelector("div");
+  let hoverEffect = div.style.borderColor = "white";
+  document.body.appendChild(hoverEffect);
+});
+document.querySelector("div").addEventListener("mouseout", function (e) {
+  const div = document.querySelector("div");
+  let hoverEffect = div.style.borderColor = "black";
+  document.body.appendChild(hoverEffect);
+});
+//When the card is clicked the color changes
+document.querySelector("changeColorBtn").addEventListener("click", function (e) {
+  const div = document.querySelector("div");
+  let divColor = (div.style.backgroundColor = "gray"); //changes the background to gray
+  document.body.appendChild(divColor);
+});
+//When the heading/title is clicked it is change to "something else"
+document.querySelector("ChangeHeadingBtn").addEventListener("click", function (e) {
+  heading.innerHTML = "Something else"; //replaces the text of the heading
+});
+//Deletes the last duplicated card from the webpage
+document.querySelector(".deleteBtn").addEventListener("click", function (e) {
+  let div = document.querySelector("div");
+  document.parentNode.removeChild(div);
+});
+
 </script>
 
 <style>
