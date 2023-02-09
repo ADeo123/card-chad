@@ -11,129 +11,45 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 
-.card{
-  border-radius: 24px;
-  border: 3px solid #041E42;
-  padding: 8px;
-  width: 400px;
+div {
+  text-align: center;
+  border: 2px solid Black;
+  padding: 8px 8px 32px 32px;
+  width: 500px;
+  height: 500px;
+}
+button {
+  color: blue;
+  padding: px 8px 8px 8px 8px;
   display: block;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0px 8px 24px #999;
-  background-color: lightgrey;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: auto
 }
-
-.textbox{
-  font-size: 15px;
-  margin-left: 112px;
-  text-align: right;
-  border-radius: 24px;
-}
-
-.description{
-  text-shadow: -1px 1px 2px #FFFFFF,
-				  1px 1px 2px #FFFFFF,
-				  1px -1px 0 #FFFFFF,
-				  -1px -1px 0 #FFFFFF;
-}
-
-.haxbtn{
-  display:inline-block;
-  text-align: center;
+.btn:hover {
+  background-color: blue; 
   color: white;
-  background-color: #041E42;
-  border-radius: 5px;
-  font-size: 20px;
-  width: 120px;
-  height: 32px;
-  box-shadow: 0px 10px 24px #999;
-  border: 1px solid #041E42;
-  visibility: visible;
-  padding-top: 10px;
-  margin-right: 32px;
 }
-
-.haxbtn:hover{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
-}
-
-.haxbtn:focus{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
-}
-
-.title{
+.btn:focus {
+  background-color: blue; 
   color: white;
-  font-size: 24px;
-  text-shadow: -1px 1px 2px #000,
-				  1px 1px 2px #000,
-				  1px -1px 0 #000,
-				  -1px -1px 0 #000;
 }
-
-.giaImg{
-  width: 200px;
-  border-radius: 24px;
-  box-shadow: 0px 10px 24px #999;
-  float: left;
+.image {
+  padding: 8px 8px 32px 190px;
 }
-
-.outsideBtn{
-  color: white;
-  background-color: #041E42;
-  border-radius: 5px;
-  font-size: 20px;
-  width: 120px;
-  height: 50px;
-  box-shadow: 0px 10px 24px #999;
-  border: 1px solid #041E42;
-  margin-right: 32px;
-  margin-bottom: 16px;
-  display: inline-block;
+.heading{
+  margin: 50px;
 }
-
-.outsideBtn:hover{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
+@media (min-width: 500px) and (max-width: 800px) {
+  button {
+    opacity: 0;
+    display: none;
+  }
 }
-
-.outsideBtn:focus{
-  color: #e0e0e0;
-  background-color: #07377a;
-  box-shadow: 0px 10px 24px white;
-  border: 1px solid #07377a;
+@media (max-width: 500px) {
+  div {
+    font-size: 10px;
+    image-size: auto;
+  }
 }
-
-.basic{
-  background-color: hotpink;
-}
-
-.hoverCard{
-  border: 3px solid purple;
-  box-shadow: 0px 8px 24px yellow;
-}
-
-input:checked + label + .description { display:none; }
-
-
 
 </style>

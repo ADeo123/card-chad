@@ -1,32 +1,26 @@
 <template>
   <h1>{{ msg }}</h1>
 
-<!-- My custom code -->
-<button class="outsideBtn" v-on:click="duplicate">Duplicate</button>
-<button class="outsideBtn" v-on:click="background">Background</button>
-<button class="outsideBtn" v-on:click="heading">Heading</button>
-<button class="outsideBtn" v-on:click="deleter">Delete</button>
 
-<div class="card" v-on:mouseover="hoover">
-  <h1 class="title">Chad of Cyber IST</h1>
+<button class="deleteBtn">Delete Card</button>
+<button class="duplicateBtn"> Duplicate Card</button>
+<button class="changeColorBtn"> Background Color</button>
+<button class="ChangeHeadingBtn">Change Heading</button>
 
-  <img class="giaImg" src="https://media.discordapp.net/attachments/963095262363017246/1020131830323744788/unknown.png?width=468&height=468" alt="Professor Giacobe">
-  
-<div class="textbox">
-  <details>
-    <summary class="haxbtn">Details</summary>
-    <p class="description pScale">Professor Giacobe may look like a simple man but perceptions can be misleading. Underneath the facade of a simple college of IST professor lies the holiness of an <strong>IST GOD</strong>!</p>
-  </details>
-
-  </div>
+<div>
+  <h1 id="heading"> Penn State University </h1>
+  <img src="https://www.psu.edu/psu-edu-assets/images/shared/psu-mark.svg" width="400" class="image">
+  <h2>Description</h2>
+  <p1>The Penn State University logo showing the Nittany Lion. </p1>
+  <button> <a href="https://hax.psu.edu"> Details
+  </a> </button> 
 </div>
-
 
   <p>
     <a href="https://vitejs.dev/guide/features.html" target="_blank">
       Vite Documentation
     </a>
-    |
+    
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
   </p>
 
@@ -49,58 +43,6 @@ const state = reactive({ count: 0 })
 
 <script>
 
-export default {
-  methods: {
-    hoover() {
-      document.querySelectorAll(".card").forEach((item) => {
-        if(!item.classList.contains("hoverCard")){
-          item.classList.add("hoverCard");
-          console.log(item);
-        }
-        else{
-          item.classList.remove("hoverCard");
-          console.log(item);
-        }
-      });
-    },
-    
-    duplicate() {
-      const cloneCard = document.querySelector(".card").cloneNode(true);
-      document.body.appendChild(cloneCard);
-      console.log(cloneCard);    
-    },
-
-    background() {
-      document.querySelectorAll(".card").forEach((item) => {
-        if(!item.classList.contains("basic")){
-          item.classList.add("basic");
-          console.log(item);
-        }
-        else{
-          item.classList.remove("basic");
-          console.log(item);
-        }
-      });
-    },
-
-    heading() {
-      document.querySelectorAll(".title").forEach((item) => {   
-        if(item.innerHTML=="something else"){
-          item.innerHTML="Chad of Cyber IST";
-        }
-        else{
-          item.innerHTML="something else";
-        }
-      });
-    },
-
-    //Kinda borked rn
-    deleter(){
-      document.querySelector(".card:last-child").remove();
-      console.log(card);
-    }
-  }
-}
 </script>
 
 <style scoped>
